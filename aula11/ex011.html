@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAÍSES</title>
+
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        div#res {
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Países</h1>
+    Qual é o seu país: <input type="text" name="pais" id="txtp">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() { 
+            var txtp = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var pais = 'EUA'
+            res.innerHTML = `Você está atualmente em ${pais}!`
+            if (pais == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro!</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro!</strong></p>`
+            }
+            res.innerHTML += `Vivendo em ${pais}!`
+        }
+    </script>
+</body>
+</html>
